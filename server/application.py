@@ -7,6 +7,7 @@ class TestMe:
     """
     Пример класса для демонстрации тестовых методов.
     """
+
     def take_five(self):
         """
         Возвращает число 5.
@@ -36,4 +37,3 @@ if __name__ == '__main__':
         print(f"An unexpected error occurred: {e}")
     finally:
         print("Server shutting down...")
-
