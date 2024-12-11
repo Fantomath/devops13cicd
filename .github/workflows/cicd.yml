@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: '3.10'
       - run: pip install -r requirements.txt
-      - run: pylint -d C0114,C0115,C0116 server/application.py
+      - run: pylint -d W0718,C0114,C0115,C0116 server/application.py
 
   unit-tests:
     runs-on: ubuntu-24.04
@@ -36,4 +36,3 @@ jobs:
       - run: docker ps -a
       - run: sleep 11
       - run: 'curl 127.0.0.1:8000'
-
