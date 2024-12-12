@@ -7,6 +7,7 @@ class TestMe:
     """
     Пример класса для демонстрации тестовых методов.
     """
+
     def take_five(self):
         """
         Возвращает число 5.
@@ -28,12 +29,7 @@ if __name__ == '__main__':
         with socketserver.TCPServer(("", PORT), Handler) as http:
             print(f"Server running on http://0.0.0.0:{PORT}")
             http.serve_forever()
-    except KeyboardInterrupt:
-        print("\nServer stopped by user.")
+    except ValueError as e:
+        print(f"ValueError: {e}")
     except OSError as e:
-        print(f"Port {PORT} is already in use. Please choose another port.")
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
-    finally:
-        print("Server shutting down...")
-
+        print(f"OSError: {e}")
